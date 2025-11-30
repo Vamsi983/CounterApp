@@ -1,0 +1,120 @@
+/* ---------- Themes ---------- */
+
+body.light {
+    background: #f2f2f2;
+    color: #222;
+}
+
+body.dark {
+    background: #1b1b1b;
+    color: white;
+}
+
+body.neon {
+    background: #000;
+    color: #39ff14;
+}
+
+/* ---------- Layout ---------- */
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 50px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+body.dark .container {
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+
+body.neon .container {
+    background: #111;
+    box-shadow: 0 0 20px #39ff14;
+}
+
+/* ---------- Counter ---------- */
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Working animation */
+.pop {
+    animation: popAnim 0.25s ease;
+}
+
+@keyframes popAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+}
+
+/* ---------- Buttons ---------- */
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 22px;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Theme-specific button colors */
+body.light button {
+    background: #ddd;
+}
+
+body.dark button {
+    background: #333;
+    color: white;
+}
+
+body.neon button {
+    background: black;
+    color: #39ff14;
+    border: 1px solid #39ff14;
+    box-shadow: 0 0 10px #39ff14;
+}
+
+/* ---------- Theme Switch ---------- */
+
+.theme-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+select {
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
